@@ -13,5 +13,5 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.CLIENT_REPO_PAT }}" \
             https://api.github.com/repos/julieminer-earnin/model-alignment-client/dispatches \
-            -d '{"event_type":"api_update", "client_payload":{"name": ${{ github.event.release.name }}, "tag": ${{ github.event.release.tag_name }} }}'
+            -d '{"event_type":"api_update", "client_payload":{"name": "${{ github.event.release.name }}", "tag": "${{ github.event.release.tag_name }}" }}'
     
