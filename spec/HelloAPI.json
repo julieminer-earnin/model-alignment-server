@@ -29,6 +29,31 @@
                     }
                 }
             }
+        },
+        "/bye/{user}": {
+            "get": {
+                "description": "Returns a goodbye to the user!",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "type": "string",
+                        "required": true,
+                        "description": "The name of the user to say good bye to."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the goodbye.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid characters in \"user\" were provided."
+                    }
+                }
+            }
         }
     }
 }
